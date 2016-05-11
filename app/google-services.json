@@ -1,0 +1,56 @@
+{
+  "project_info": {
+    "project_id": "tradify-1281",
+    "project_number": "293493671598",
+    "name": "tradify"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:293493671598:android:b2957b09327bcc11",
+        "client_id": "android:com.hello_world.ronak.tradify",
+        "client_type": 1,
+        "android_client_info": {
+          "package_name": "com.hello_world.ronak.tradify",
+          "certificate_hash": []
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "293493671598-gjhc823trjsotlltfo8dc9dht9qjslub.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.hello_world.ronak.tradify",
+            "certificate_hash": "6E001DDD2786EB7319A2B7EE474B6BFE429B308D"
+          }
+        },
+        {
+          "client_id": "293493671598-imcmupt85n7rvbb0540saim8bgpav8d6.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [],
+      "services": {
+        "analytics_service": {
+          "status": 1
+        },
+        "cloud_messaging_service": {
+          "status": 1,
+          "apns_config": []
+        },
+        "appinvite_service": {
+          "status": 1,
+          "other_platform_oauth_client": []
+        },
+        "google_signin_service": {
+          "status": 2
+        },
+        "ads_service": {
+          "status": 1
+        }
+      }
+    }
+  ],
+  "client_info": [],
+  "ARTIFACT_VERSION": "1"
+}

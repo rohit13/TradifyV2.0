@@ -1,0 +1,460 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+
+
+        <RelativeLayout
+            xmlns:android="http://schemas.android.com/apk/res/android"
+            xmlns:app="http://schemas.android.com/apk/res-auto"
+            xmlns:tools="http://schemas.android.com/tools"
+            android:id="@+id/rl_filter"
+            android:background="@color/colorBG"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+
+
+            <GridLayout
+                android:id="@+id/gl_filter"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/white"
+                android:layout_marginLeft="5dp"
+                android:paddingLeft="5dp"
+                android:layout_marginRight="5dp"
+                android:columnCount="2">
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="5dp"
+                    android:layout_below="@+id/txt_dv_transactionMode"
+                    android:id="@+id/div0"
+                    android:layout_columnSpan="2"
+                    android:background="@color/colorBG"/>
+
+                <TextView
+                    android:id="@+id/lbl_cat"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_columnSpan="2"
+                    android:text="Categories"
+                    android:textAllCaps="true"
+                    android:textColor="@color/black"
+                    android:textSize="18dp" />
+
+                <TextView
+                    android:id="@+id/lbl_cat_ele"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_columnSpan="1"
+                    android:layout_columnWeight="20"
+                    android:text="Electronics"
+                    android:textColor="@color/data"
+                    android:textSize="15dp" />
+
+                <RadioButton
+                    android:id="@+id/chk_ele"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_columnSpan="1"
+                    android:layout_columnWeight="1"
+                    android:onClick="onRadioButtonClicked"
+                    android:paddingRight="0dp" />
+
+                <TextView
+                    android:id="@+id/lbl_cat_cars"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_columnSpan="1"
+                    android:layout_columnWeight="20"
+                    android:text="Cars and Motors"
+                    android:textColor="@color/data"
+                    android:textSize="15dp" />
+
+                <RadioButton
+                    android:id="@+id/chk_cars"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_columnSpan="1"
+                    android:layout_columnWeight="1"
+                    android:onClick="onRadioButtonClicked"
+                    android:paddingRight="0dp" />
+
+                <TextView
+                    android:id="@+id/lbl_cat_sports"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_columnSpan="1"
+                    android:layout_columnWeight="20"
+                    android:text="Sports and Games"
+                    android:textColor="@color/data"
+                    android:textSize="15dp" />
+
+                <RadioButton
+                    android:id="@+id/chk_sports"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_columnSpan="1"
+                    android:layout_columnWeight="1"
+                    android:onClick="onRadioButtonClicked"
+                    android:paddingRight="0dp" />
+
+                <TextView
+                    android:id="@+id/lbl_cat_home"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_columnSpan="1"
+                    android:layout_columnWeight="20"
+                    android:text="Home and Garden"
+                    android:textColor="@color/data"
+                    android:textSize="15dp" />
+
+                <RadioButton
+                    android:id="@+id/chk_home"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_columnSpan="1"
+                    android:layout_columnWeight="1"
+                    android:onClick="onRadioButtonClicked"
+                    android:paddingRight="0dp" />
+
+                <TextView
+                    android:id="@+id/lbl_cat_movies"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_columnSpan="1"
+                    android:layout_columnWeight="20"
+                    android:text="Movies, Music, and Books"
+                    android:textColor="@color/data"
+                    android:textSize="15dp" />
+
+                <RadioButton
+                    android:id="@+id/chk_movies"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_columnSpan="1"
+                    android:layout_columnWeight="1"
+                    android:onClick="onRadioButtonClicked"
+                    android:paddingRight="0dp" />
+
+                <TextView
+                    android:id="@+id/lbl_cat_fashion"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_columnSpan="1"
+                    android:layout_columnWeight="20"
+                    android:text="Fashion and Accessories"
+                    android:textColor="@color/data"
+                    android:textSize="15dp" />
+
+                <RadioButton
+                    android:id="@+id/chk_fashion"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_columnSpan="1"
+                    android:layout_columnWeight="1"
+                    android:onClick="onRadioButtonClicked"
+                    android:paddingRight="0dp" />
+
+                <TextView
+                    android:id="@+id/lbl_cat_baby"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_columnSpan="1"
+                    android:layout_columnWeight="20"
+                    android:text="Baby and Child"
+                    android:textColor="@color/data"
+                    android:textSize="15dp" />
+
+                <RadioButton
+                    android:id="@+id/chk_baby"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_columnSpan="1"
+                    android:layout_columnWeight="1"
+                    android:onClick="onRadioButtonClicked"
+                    android:paddingRight="0dp" />
+
+                <TextView
+                    android:id="@+id/lbl_cat_others"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_columnSpan="1"
+                    android:layout_columnWeight="20"
+                    android:text="Others"
+                    android:textColor="@color/data"
+                    android:textSize="15dp" />
+
+                <RadioButton
+                    android:id="@+id/chk_others"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_columnSpan="1"
+                    android:layout_columnWeight="1"
+                    android:onClick="onRadioButtonClicked"
+                    android:paddingRight="0dp" />
+                <!--starts posted within-->
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="5dp"
+                    android:layout_below="@+id/txt_dv_transactionMode"
+                    android:id="@+id/div1"
+                    android:layout_columnSpan="2"
+                    android:background="@color/colorBG"/>
+                <TextView
+                    android:id="@+id/lbl_posted"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_columnSpan="2"
+                    android:text="Posted Within"
+                    android:textAllCaps="true"
+                    android:textColor="@color/black"
+                    android:textSize="18dp" />
+
+                <TextView
+                    android:id="@+id/lbl_post_24hr"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_columnSpan="1"
+                    android:layout_columnWeight="20"
+                    android:text="Last 24 Hours"
+                    android:textColor="@color/data"
+                    android:textSize="15dp" />
+
+                <RadioButton
+                    android:id="@+id/chk_24hr"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_columnSpan="1"
+                    android:layout_columnWeight="1"
+                    android:onClick="onRadioButtonClicked"
+                    android:paddingRight="0dp" />
+
+                <TextView
+                    android:id="@+id/lbl_post_7days"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_columnSpan="1"
+                    android:layout_columnWeight="20"
+                    android:text="Last 7 Days"
+                    android:textColor="@color/data"
+                    android:textSize="15dp" />
+
+                <RadioButton
+                    android:id="@+id/chk_7days"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_columnSpan="1"
+                    android:layout_columnWeight="1"
+                    android:onClick="onRadioButtonClicked"
+                    android:paddingRight="0dp" />
+
+                <TextView
+                    android:id="@+id/lbl_post_30days"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_columnSpan="1"
+                    android:layout_columnWeight="20"
+                    android:text="Last 30 Days"
+                    android:textColor="@color/data"
+                    android:textSize="15dp" />
+
+                <RadioButton
+                    android:id="@+id/chk_30days"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_columnSpan="1"
+                    android:layout_columnWeight="1"
+                    android:onClick="onRadioButtonClicked"
+                    android:paddingRight="0dp" />
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="5dp"
+                    android:layout_below="@+id/txt_dv_transactionMode"
+                    android:id="@+id/div2"
+                    android:layout_columnSpan="2"
+                    android:background="@color/colorBG"/>
+                <!--starts price-->
+                <TextView
+                    android:id="@+id/lbl_price"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_columnSpan="1"
+                    android:layout_columnWeight="5"
+                    android:text="Price"
+                    android:textAllCaps="true"
+                    android:textColor="@color/black"
+                    android:textSize="18dp" />
+
+                <RadioButton
+                    android:id="@+id/chk_price"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_columnSpan="1"
+                    android:layout_columnWeight="1"
+                    android:onClick="onRadioButtonClicked"
+                    android:paddingRight="0dp" />
+
+                <TextView
+                    android:id="@+id/lbl_prc_min"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_columnSpan="1"
+                    android:layout_columnWeight="5"
+                    android:text="Min"
+                    android:textColor="@color/data"
+                    android:textSize="15dp" />
+
+                <EditText
+                    android:id="@+id/edit_prc_min"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_columnWeight="5"
+                    android:textColor="@color/data" />
+
+                <TextView
+                    android:id="@+id/lbl_prc_max"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_columnSpan="1"
+                    android:layout_columnWeight="5"
+                    android:text="Max"
+                    android:textColor="@color/data"
+                    android:textSize="15dp"
+
+                    />
+
+                <EditText
+                    android:id="@+id/edit_prc_max"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_columnWeight="5"
+                    android:textColor="@color/data" />
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="5dp"
+                    android:layout_below="@+id/txt_dv_transactionMode"
+                    android:id="@+id/div3"
+                    android:layout_columnSpan="2"
+                    android:background="@color/colorBG"/>
+                <!--starts sort by-->
+                <TextView
+                    android:id="@+id/lbl_sort_by"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_columnSpan="2"
+                    android:text="Sort By"
+                    android:textAllCaps="true"
+                    android:textColor="@color/black"
+                    android:textSize="18dp" />
+
+            </GridLayout>
+
+            <GridLayout
+                android:id="@+id/gl_filter_3"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/gl_filter"
+                android:background="@color/white"
+                android:layout_marginLeft="5dp"
+                android:paddingLeft="5dp"
+                android:layout_marginRight="5dp"
+                android:columnCount="2">
+
+                <TextView
+                    android:id="@+id/lbl_sort_pricehl"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_columnSpan="1"
+                    android:layout_columnWeight="11"
+                    android:text="Price"
+                    android:textColor="@color/data"
+                    android:textSize="15dp" />
+
+                <RadioButton
+                    android:id="@+id/rb_sort_pricelh"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_columnWeight="1"
+                    android:onClick="onRadioButtonClicked" />
+            </GridLayout>
+
+            <GridLayout
+                android:id="@+id/gl_filter_4"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/white"
+                android:layout_marginLeft="5dp"
+                android:paddingLeft="5dp"
+                android:layout_marginRight="5dp"
+                android:layout_below="@+id/gl_filter_3"
+                android:columnCount="2">
+
+                <TextView
+                    android:id="@+id/lbl_sort_posted"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_columnSpan="1"
+                    android:layout_columnWeight="22"
+                    android:text="Most Recently Published"
+                    android:textColor="@color/data"
+                    android:textSize="15dp" />
+
+                <RadioButton
+                    android:id="@+id/chk_sort_posted"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_columnSpan="1"
+                    android:layout_columnWeight="3.5"
+                    android:onClick="onRadioButtonClicked"
+                    android:paddingRight="0dp" />
+
+            </GridLayout>
+
+            <GridLayout
+                android:id="@+id/gl_filter_2"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/gl_filter_4"
+                android:background="@color/white"
+                android:layout_marginLeft="5dp"
+                android:paddingLeft="5dp"
+                android:layout_marginRight="5dp"
+                android:columnCount="2"
+                android:rowCount="1">
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="5dp"
+                    android:layout_below="@+id/txt_dv_transactionMode"
+                    android:id="@+id/div4"
+                    android:layout_columnSpan="2"
+                    android:background="@color/colorBG"/>
+                <Button
+                    android:id="@+id/btn_reset"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_columnSpan="1"
+                    android:layout_columnWeight="1"
+                    android:text="Reset"
+                    android:textColor="#FFFFFF"
+                    android:background="@color/colorPrimary"
+                    android:layout_marginRight="3dp"
+                    android:textSize="15dp" />
+
+                <Button
+                    android:id="@+id/btn_apply"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_columnSpan="1"
+                    android:layout_columnWeight="1"
+                    android:text="Apply"
+                    android:textColor="#FFFFFF"
+                    android:background="@color/colorPrimary"
+                    android:layout_marginLeft="3dp"
+                    android:textSize="15dp" />
+
+            </GridLayout>
+
+
+        </RelativeLayout>

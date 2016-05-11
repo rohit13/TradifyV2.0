@@ -1,0 +1,111 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.v7.widget.CardView
+    xmlns:card_view="http://schemas.android.com/apk/res-auto"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:background="?android:attr/selectableItemBackground"
+    android:id="@+id/card_view"
+    android:clickable="true"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    card_view:cardCornerRadius="2dp"
+    android:layout_marginLeft="10dp"
+    android:layout_marginRight="10dp"
+    android:layout_marginBottom="5dp"
+    android:layout_marginTop="5dp">
+
+    <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        android:orientation="vertical"
+        android:id="@+id/myRow"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+        <ImageView
+            android:id="@+id/productImage"
+            android:layout_width="120dp"
+            android:layout_height="120dp"
+            android:layout_marginRight="5dp"
+            android:layout_marginTop="3dp"
+            android:layout_marginLeft="5dp"
+            android:layout_marginBottom="5dp"
+            android:scaleType="fitXY"/>
+        <TextView
+            android:id="@+id/productName"
+            android:layout_width="160dp"
+            android:layout_height="wrap_content"
+            android:text=""
+            android:layout_marginTop="3dp"
+            android:textSize="19dp"
+            android:layout_marginLeft="134dp"
+            android:textColor="@color/colorPrimary" />
+
+        <TextView
+            android:id="@+id/productPostedDate"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/productName"
+            android:layout_marginTop="15dp"
+            android:layout_marginLeft="4dp"
+            android:paddingRight="2dp"
+            android:text="ddd"
+            android:textColor="@color/black"
+            android:layout_toRightOf="@+id/productImage"
+            android:textSize="15dp" />
+        <TextView
+            android:id="@+id/productDesc"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textSize="14dp"
+            android:layout_marginTop="1dp"
+            android:layout_marginLeft="4dp"
+            android:textColor="@color/data"
+            android:layout_below="@+id/productPostedDate"
+            android:layout_toRightOf="@+id/productImage"
+            />
+
+        <TextView
+            android:id="@+id/lbl_loi"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_toRightOf="@+id/productImage"
+            android:layout_below="@id/productDesc"
+            android:layout_marginTop="1dp"
+            android:textColor="@color/black"
+            android:text="Can trade with : "
+            android:layout_marginLeft="4dp"
+            android:textSize="14dp" />
+
+        <TextView
+            android:id="@+id/listofitems"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_toRightOf="@+id/lbl_loi"
+            android:layout_below="@id/productDesc"
+            android:layout_marginTop="1dp"
+            android:textColor="@color/data"
+            android:layout_marginLeft="4dp"
+            android:textSize="14dp" />
+
+        <ImageView
+            android:id="@+id/gpsIcon"
+            android:src="@drawable/ic_location"
+            android:layout_height="25dp"
+            android:layout_width="25dp"
+            android:scaleType="fitXY"
+            android:layout_marginTop="6dp"
+            android:layout_marginLeft="15dp"
+            android:paddingLeft="5dp"
+            android:paddingBottom="5dp"
+            android:layout_below="@+id/productImage"
+            android:layout_marginEnd="6dp" />
+
+        <TextView
+            android:id="@+id/productAddress"
+            android:layout_width="wrap_content"
+            android:layout_height="25dp"
+            android:layout_below="@id/productImage"
+            android:layout_marginLeft="35dp"
+            android:layout_marginTop="5dp"
+            android:textColor="@color/data"
+            android:textSize="14dp" />
+
+    </RelativeLayout>
+</android.support.v7.widget.CardView>

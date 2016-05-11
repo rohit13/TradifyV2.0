@@ -1,0 +1,93 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.hello_world.ronak.tradify"  >
+
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+    <uses-permission android:name="android.permission.CAMERA" />
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE"/>
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE"/>
+    <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
+    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
+    <uses-permission android:name="android.permission.SEND_SMS"/>
+    <uses-permission android:name="android.permission.RECEIVE_SMS"/>
+    <permission
+        android:name="${applicationId}.permission.C2D_MESSAGE"
+        android:protectionLevel="signature" />
+
+    <uses-permission android:name="${applicationId}.permission.C2D_MESSAGE" />
+    <uses-permission android:name="android.permission.WAKE_LOCK" />
+    <uses-permission android:name="android.permission.VIBRATE" />
+    <uses-permission android:name="com.google.android.c2dm.permission.RECEIVE" />
+
+    <application
+        android:name=".ProductsApplication"
+        android:allowBackup="true"
+        android:icon="@mipmap/ic_launcher"
+        android:label="@string/app_name"
+        android:supportsRtl="true"
+
+        android:theme="@style/AppTheme">
+        <activity android:name=".MainActivity"  android:configChanges="navigation|orientation|screenSize|screenLayout"></activity>
+        <activity android:name=".LoginActivity" android:configChanges="navigation|orientation|screenSize|screenLayout">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <meta-data
+            android:name="com.google.android.geo.API_KEY"
+            android:value="@string/google_maps_key" />
+
+        <activity android:name=".RegisterNewProductActivity" android:label="Add Product"  android:configChanges="navigation|orientation|screenSize|screenLayout"
+            android:parentActivityName=".Activity_HomeScreen">
+        </activity>
+
+        <activity
+            android:name="com.facebook.FacebookActivity"
+            android:configChanges="keyboard|keyboardHidden|screenLayout|screenSize|orientation"
+            android:label="@string/app_name"
+            android:theme="@android:style/Theme.Translucent.NoTitleBar" />
+
+        <meta-data
+            android:name="com.facebook.sdk.ApplicationId"
+            android:value="@string/facebook_app_id" />
+
+        <activity android:name=".Activity_HomeScreen" android:configChanges="navigation|orientation|screenSize|screenLayout" android:theme="@style/AppTheme.NoActionBar"></activity>
+        <activity android:name=".UserProfileActivity" android:label="My Profile" android:configChanges="navigation|orientation|screenSize|screenLayout" android:theme="@style/AppTheme.NoActionBar"/>
+        <activity android:name=".AccountSettingsActivity" android:label="Settings" android:configChanges="navigation|orientation|screenSize|screenLayout" android:theme="@style/AppTheme.NoActionBar"/>
+        <meta-data
+            android:name="com.google.android.gms.version"
+            android:value="@integer/google_play_services_version" />
+
+
+
+        <service android:name="com.batch.android.BatchPushService" />
+
+        <receiver
+            android:name="com.batch.android.BatchPushReceiver"
+            android:permission="com.google.android.c2dm.permission.SEND">
+            <intent-filter>
+                <action android:name="com.google.android.c2dm.intent.RECEIVE" />
+
+                <category android:name="${applicationId}" />
+            </intent-filter>
+        </receiver>
+
+        <!--service android:name=".PushService" />
+
+        <receiver android:name=".PushReceiver" android:permission="com.google.android.c2dm.permission.SEND">
+            <intent-filter>
+                <action android:name="com.google.android.c2dm.intent.RECEIVE" />
+                <category android:name="${applicationId}" />
+            </intent-filter>
+        </receiver>
+
+        <receiver
+            android:name=".PushReceiver"
+            android:enabled="true"
+            android:exported="true"></receiver-->
+        <activity android:name=".AboutUsActivity" android:theme="@style/AppTheme.NoActionBar" android:label="About Us"></activity>
+    </application>
+
+</manifest>
